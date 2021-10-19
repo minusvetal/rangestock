@@ -116,6 +116,7 @@ dd {
 * {
   font-family: "ProximaNova", "arialRounded", sans-serif;
   font-weight: normal;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -582,5 +583,224 @@ body {
 .demo__btn {
   display: inline-block;
   margin-top: 75px;
+}
+
+.version {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.version__title {
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 85px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.version__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
+
+.version__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 22%;
+          flex: 0 0 22%;
+}
+
+.version__item-title {
+  display: block;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+.version__item-text {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 50px;
+}
+
+.version__item-size {
+  height: 100px;
+  margin-bottom: 0;
+}
+
+.version .icon-wedding-rings {
+  width: 106px;
+  height: 106px;
+  padding: 5px;
+  margin-bottom: 40px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.version .icon-wedding-rings:hover {
+  -webkit-box-shadow: 0 0 10px #ff9b00, 0 0 30px 15px #ff9b00;
+          box-shadow: 0 0 10px #ff9b00, 0 0 30px 15px #ff9b00;
+  background-color: rgba(255, 155, 0, 0.3);
+  border-radius: 10px;
+}
+
+.version:after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 1400px;
+  right: 0;
+  bottom: -21%;
+  background-image: url("../images/icons/version-bg.svg");
+  background-repeat: no-repeat;
+}
+
+.answers {
+  position: relative;
+}
+
+.answers:after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 800px;
+  right: 0;
+  top: -10%;
+  background-image: url("../images/icons/answers-bg.svg");
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.answers__title {
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 85px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.answers input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.answers .accordion {
+  position: relative;
+  background: #eeeeee;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 35px;
+  line-height: 23px;
+  margin-bottom: 20px;
+}
+
+.answers .accordion-label {
+  font-family: "arialRounded";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.answers .accordion-content {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 16px;
+  background: white;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.answers .accordion:last-child {
+  margin-bottom: 0;
+}
+
+.answers .accordion-label:hover {
+  cursor: pointer;
+}
+
+.answers .accordion-label::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  right: 2%;
+  top: 20%;
+  background-image: url("../images/icons/plus.svg");
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.answers .accordion-content p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.answers input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  top: 35%;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.answers input:checked ~ .accordion-content {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  max-height: 100vh;
+  opacity: 1;
+  display: block;
+  width: 90%;
+  padding: 20px;
+  color: #fff;
+  background: #ff9b00;
+  border-radius: 50px;
+  margin-top: 40px;
+}
+
+.answers input:checked ~ .accordion-label::after {
+  background-image: url("../images/icons/plus-orange.svg");
+}
+
+.answers__btn {
+  display: block;
+  margin: 0 auto;
+  width: 35%;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.answers .copyright {
+  display: block;
+  text-align: center;
+  padding-bottom: 50px;
 }
 /*# sourceMappingURL=style.css.map */

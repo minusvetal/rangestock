@@ -239,7 +239,6 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	// text-align: center;
 	margin: 0 auto;
 	max-width: 1200px;
 	padding-bottom: 120px;
@@ -335,5 +334,185 @@
 	&__btn {
 		display: inline-block;
 		margin-top: 75px;
+	}
+}
+
+//  version
+.version {
+	position: relative;
+	margin-bottom: 100px;
+	&__title {
+		font-weight: bold;
+		font-size: 70px;
+		line-height: 85px;
+		text-align: center;
+		margin-bottom: 80px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: start;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+
+	&__item {
+		flex: 0 0 22%;
+	}
+
+	&__item-title {
+		display: block;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 37px;
+		height: 150px;
+		margin-bottom: 50px;
+	}
+
+	&__item-text {
+		font-weight: 300;
+		font-size: 22px;
+		line-height: 27px;
+		margin-bottom: 50px;
+	}
+	&__item-size {
+		height: 100px;
+		margin-bottom: 0;
+	}
+	.icon-wedding-rings {
+		width: 106px;
+		height: 106px;
+		padding: 5px;
+		margin-bottom: 40px;
+		transition: all 0.3s;
+		&:hover {
+			box-shadow: 0 0 10px $accent, 0 0 30px 15px $accent;
+			background-color: rgba(255, 155, 0, 0.3);
+			border-radius: 10px;
+		}
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		width: 700px;
+		height: 1400px;
+		right: 0;
+		bottom: -21%;
+		background-image: url("../images/icons/version-bg.svg");
+		background-repeat: no-repeat;
+	}
+}
+
+// answers
+.answers {
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 600px;
+		height: 800px;
+		right: 0;
+		top: -10%;
+		background-image: url("../images/icons/answers-bg.svg");
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 70px;
+		line-height: 85px;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	// ===========================
+
+	input {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+	.accordion {
+		position: relative;
+		background: #eeeeee;
+		border-radius: 50px;
+		font-weight: bold;
+		font-size: 20px;
+		padding: 35px;
+		line-height: 23px;
+		margin-bottom: 20px;
+		&-label {
+			font-family: "arialRounded";
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 23px;
+			transition: all 0.5s;
+		}
+		&-content {
+			max-height: 0;
+			opacity: 0;
+			padding: 0 16px;
+			background: white;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.accordion-label:hover {
+		cursor: pointer;
+	}
+	.accordion-label::after {
+		content: "";
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		right: 2%;
+		top: 20%;
+		background-image: url("../images/icons/plus.svg");
+		background-repeat: no-repeat;
+		transition: all 0.3s;
+	}
+	.accordion-content p {
+		margin: 0;
+		font-size: 18px;
+		font-weight: bold;
+		transition: all 0.3s;
+	}
+
+	input:checked + .accordion-label::after {
+		-webkit-transform: rotate(90deg);
+		top: 35%;
+		transform: rotate(180deg);
+		transition: all 0.3s;
+	}
+	input:checked ~ .accordion-content {
+		transition: all 0.5s;
+		max-height: 100vh;
+		opacity: 1;
+		display: block;
+		width: 90%;
+		padding: 20px;
+		color: $white;
+		background: $accent;
+		border-radius: 50px;
+		margin-top: 40px;
+	}
+	input:checked ~ .accordion-label::after {
+		background-image: url("../images/icons/plus-orange.svg");
+	}
+	&__btn {
+		display: block;
+		margin: 0 auto;
+		width: 35%;
+		margin-top: 70px;
+		margin-bottom: 70px;
+	}
+	.copyright {
+		display: block;
+		text-align: center;
+		padding-bottom: 50px;
 	}
 }
