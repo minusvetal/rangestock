@@ -1,0 +1,32 @@
+$dark: #000;
+$white: #fff;
+$accent: rgba(255, 155, 0, 1);
+
+* {
+	font-family: "ProximaNova", "arialRounded", sans-serif;
+	font-weight: normal;
+}
+
+body {
+	background-color: $white;
+	color: $dark;
+}
+.container {
+	max-width: 1480px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.btn {
+	padding: 40px 100px;
+	background: #3a87fe;
+	border-radius: 50px;
+	font-weight: bold;
+	font-size: 30px;
+	color: $white;
+	cursor: pointer;
+	transition: color 0.4s;
+	&:hover {
+		color: $accent;
+	}
+}
