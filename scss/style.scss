@@ -140,7 +140,6 @@
 	}
 	&__item {
 		display: flex;
-		align-items: flex-start;
 		margin-bottom: 45px;
 		&-icon {
 			display: flex;
@@ -235,12 +234,9 @@
 }
 
 .demo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 	margin: 0 auto;
 	max-width: 1200px;
+	justify-content: center;
 	padding-bottom: 120px;
 	&::before {
 		content: "";
@@ -269,6 +265,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: 0 auto;
 		max-width: 1100px;
 	}
 
@@ -331,8 +328,9 @@
 		padding: 20px 50px;
 		margin-top: 100px;
 	}
-	&__btn {
-		display: inline-block;
+	&__link {
+		display: flex;
+		justify-content: center;
 		margin-top: 75px;
 	}
 }
